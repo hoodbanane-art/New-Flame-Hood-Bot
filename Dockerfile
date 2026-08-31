@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1
 
-FROM node:22-alpine AS build
+FROM node:26-alpine AS build
 
 WORKDIR /app
 
@@ -11,7 +11,7 @@ COPY tsconfig.json tsconfig.build.json ./
 COPY src ./src
 RUN npm run build
 
-FROM node:22-alpine AS runtime
+FROM node:26-alpine AS runtime
 
 LABEL org.opencontainers.image.source="https://github.com/focalorrr/roblox-moderation-bot"
 LABEL org.opencontainers.image.description="Discord moderation bot for Roblox Open Cloud"
