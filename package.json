@@ -1,0 +1,50 @@
+{
+  "name": "roblox-discord-moderation-bot",
+  "version": "1.0.0",
+  "description": "Secure Discord moderation commands for Roblox experiences through Open Cloud.",
+  "main": "dist/index.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "dev": "tsx src/index.ts",
+    "start": "node dist/index.js",
+    "setup": "tsx src/setup.ts",
+    "register": "tsx src/registerCommands.ts",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run tests"
+  },
+  "keywords": [
+    "discord",
+    "roblox",
+    "moderation",
+    "open-cloud"
+  ],
+  "author": "Focalorrr",
+  "license": "MIT",
+  "homepage": "https://github.com/focalorrr/roblox-moderation-bot#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/focalorrr/roblox-moderation-bot.git"
+  },
+  "bugs": {
+    "url": "https://github.com/focalorrr/roblox-moderation-bot/issues"
+  },
+  "engines": {
+    "node": ">=22",
+    "npm": ">=10"
+  },
+  "dependencies": {
+    "discord.js": "^14.19.3",
+    "dotenv": "^16.5.0",
+    "zod": "^3.25.30"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.24",
+    "tsx": "^4.19.4",
+    "typescript": "^5.8.3",
+    "vitest": "^4.1.8"
+  },
+  "overrides": {
+    "undici": "6.27.0"
+  }
+}
